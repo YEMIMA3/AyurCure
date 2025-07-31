@@ -136,20 +136,16 @@ const cards = ref([
     image: new URL("../assets/feature2.png", import.meta.url).href,
   },
   {
-    key: "reminder",
-    image: new URL("../assets/feature6.png", import.meta.url).href,
-  },
-  {
-    key: "dualalert",
-    image: new URL("../assets/features7.jpg", import.meta.url).href,
-  },
-  {
     key: "emergency",
     image: new URL("../assets/feature4.png", import.meta.url).href,
   },
   {
-    key: "renewal",
-    image: new URL("../assets/feature3.png", import.meta.url).href,
+    key: "appoinment",
+    image: new URL("../assets/feature4.png", import.meta.url).href,
+  },
+  {
+    key: "contactUs",
+    image: new URL("../assets/feature4.png", import.meta.url).href,
   },
 ])
 
@@ -159,13 +155,13 @@ const flows = ref([
     id: 1,
     title: 'Search with Confidence',
     desc: 'Type in symptoms like "cold" or "diabetes" with intelligent auto-suggestions.',
-    imageUrl: '../images/search.jpg'
+    imageUrl: '../images/search1.jpg'
   },
   {
     id: 2,
     title: 'Discover Trusted Remedies',
     desc: 'Find natural treatments like Neem paste for acne or Tulsi tea for colds.',
-    imageUrl: 'https://img.freepik.com/premium-photo/herbal-remedies-bowl_23-2149390570.jpg'
+    imageUrl: '../images/search.jpg'
   },
   {
     id: 3,

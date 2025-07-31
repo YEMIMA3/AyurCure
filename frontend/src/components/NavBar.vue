@@ -72,6 +72,12 @@
           <li><router-link to="/doctors" @click="toggleMenu">👨‍⚕️ {{ $t('navbar.doctors') }}</router-link></li>
           <li><router-link to="/contact" @click="toggleMenu">📞 {{ $t('navbar.contact') }}</router-link></li>
         </ul>
+
+        <div class="sidebar-footer">
+          <button class="sidebar-signout" @click="signOut" aria-label="Sign out">
+            {{ $t('profile.signOut') || 'Sign Out' }} 
+          </button>
+        </div>
       </aside>
     </transition>
   </div>
@@ -147,6 +153,15 @@ export default {
       }
     }
 
+    const signOut = () => {
+      if (confirm("Are you sure you want to sign out?")) {
+        localStorage.removeItem('user')
+        localStorage.removeItem('profileImage')
+        window.location.href = '/'
+      }
+    }
+
+
     const syncProfileImage = () => {
       profileImage.value = localStorage.getItem('profileImage')
     }
@@ -181,6 +196,7 @@ export default {
       toggleMenu,
       toggleNotifications,
       toggleProfile,
+      signOut,
       fetchNotifications
     }
   }
@@ -305,6 +321,36 @@ export default {
   gap: 0.5rem;
   transition: all 0.3s ease;
 }
+
+.sidebar-footer {
+  margin-top: auto;
+  width: 100%;
+  padding: 0;
+  background: #a8e6cf; /* light green */
+  display: flex;
+}
+
+.sidebar-signout {
+  background: transparent;
+  border: none;
+  color: #124c33; /* dark green for contrast */
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  border-radius: 0; /* flush with footer bar */
+  transition: background 0.2s ease;
+}
+
+.sidebar-signout:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 
 .sidebar-menu li a:hover {
   color: #a8e6cf;

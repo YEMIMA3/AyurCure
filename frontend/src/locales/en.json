@@ -34,21 +34,17 @@
           "title": "🌍 Multilingual Support",
           "text": "Switch between Indian languages to browse content in your native tongue."
         },
-        "reminder": {
-          "title": "🔔 Daily Medicine Reminders",
-          "text": "Automated reminders for Ayurvedic medicine intake tracking."
-        },
-        "dualalert": {
-          "title": "👨‍👩‍👧‍👦 Dual Number Alerts",
-          "text": "Reminders sent to both primary and alternate numbers for family awareness."
-        },
         "emergency": {
           "title": "🆘 Emergency Contact Integration",
           "text": "Emergency button dials 108 instantly—essential for rural or elderly users."
         },
-        "renewal": {
-          "title": "📅 Renewal Alerts with Color Coding",
-          "text": "Color-coded alerts: 🔴 Today, 🟠 3 Days, 🟢 1 Week+ for prescription renewals."
+        "appoinment": {
+          "title": " 📅 Schedule a Doctor Visit",
+          "text": "Book appointments with our experienced doctors in just a few clicks. Convenient and hassle-free consultation from anywhere."
+        },
+        "contactUs": {
+          "title": " 📞 Contact AyurCure Team",
+          "text": "Have questions, feedback, or facing an issue? Reach out to the AyurCure team and we’ll be happy to assist you."
         }
       }
     },
@@ -318,7 +314,8 @@
   "savedRemedies": "Saved Remedies",
   "remediesSaved": "3 remedies saved",
   "medicalHistory": "Medical History",
-  "medicalTip": "Ginger tea may help..."
+  "medicalTip": "Ginger tea may help...",
+  "signOut": "Sign Out  ➔"
 },
   "notifications": {
     "title": "🔔 Notifications",
