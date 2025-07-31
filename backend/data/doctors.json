@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Dr. Anjali Sharma",
+    "email": "yemimanathaa@gmail.com",
+    "phone": "+91 9876543210",
+    "degree": "BAMS, MD (Ayurveda)",
+    "specialization": "Dermatologist",
+    "location": "Delhi, India"
+  },
+  {
+    "name": "Dr. Meera Kapoor",
+    "email": "yemimanathaa@gmail.com",
+    "phone": "+91 9123456780",
+    "degree": "BAMS, Diploma in Dermatology",
+    "specialization": "Skin",
+    "location": "Mumbai, India"
+  },
+  {
+    "name": "Dr. Nandini Rao",
+    "email": "yemimanathaa@gmail.com",
+    "phone": "+91 9988776655",
+    "degree": "BAMS, MS (Gynecology)",
+    "specialization": "Gynecologist",
+    "location": "Bangalore, India"
+  },
+  {
+    "name": "Dr. Rakesh Menon",
+    "email": "yemimanathaa@gmail.com",
+    "phone": "+91 9871234567",
+    "degree": "BAMS, Certification in Ayurvedic Psychology",
+    "specialization": "Stress and Anxiety",
+    "location": "Chennai, India"
+  }
+]
