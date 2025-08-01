@@ -3,7 +3,7 @@
     <main class="diet-wrapper">
       <div class="overlay-container">
         <button class="close-btn" @click="goHome">✕</button>
-        <h1 class="title">AyurCure Diet Plans</h1>
+        <h1 class="title">{{ $t('dietPlans.title') }}</h1>
 
         <!-- Grid of Cards -->
         <div class="card-grid" :class="{ blurred: selectedIndex !== null }">
@@ -14,30 +14,36 @@
             @click="expandCard(index)"
           >
             <img :src="condition.image" alt="condition" class="diet-image" />
-            <span class="card-label">{{ condition.name }}</span>
+            <span class="card-label">{{ $t(`dietPlans.conditions.${condition.translationKey}.name`) }}</span>
           </button>
         </div>
 
         <!-- Enlarged View -->
         <div v-if="selectedIndex !== null" class="enlarged-card">
-          <button class="back-btn" @click="selectedIndex = null">Back</button>
-          <h2 class="center-text">{{ conditions[selectedIndex].name }} Diet Plan</h2>
+          <button class="back-btn" @click="selectedIndex = null">{{ $t('dietPlans.backButton') }}</button>
+          <h2 class="center-text">{{ $t(`dietPlans.conditions.${conditions[selectedIndex].translationKey}.name`) }} {{ $t('dietPlans.dietPlan') }}</h2>
           <div class="diet-info">
             <div class="diet-section">
-              <strong class="section-header">What to Eat</strong>
+              <strong class="section-header">{{ $t('dietPlans.whatToEat') }}</strong>
               <ul>
-                <li v-for="item in conditions[selectedIndex].eat" :key="item">{{ item }}</li>
+                <li v-for="(item, i) in conditions[selectedIndex].eat" :key="i">
+                  {{ $t(`dietPlans.conditions.${conditions[selectedIndex].translationKey}.eat.${i}`) }}
+                </li>
               </ul>
             </div>
             <div class="diet-section">
-              <strong class="section-header">What to Avoid</strong>
+              <strong class="section-header">{{ $t('dietPlans.whatToAvoid') }}</strong>
               <ul>
-                <li v-for="item in conditions[selectedIndex].avoid" :key="item">{{ item }}</li>
+                <li v-for="(item, i) in conditions[selectedIndex].avoid" :key="i">
+                  {{ $t(`dietPlans.conditions.${conditions[selectedIndex].translationKey}.avoid.${i}`) }}
+                </li>
               </ul>
             </div>
             <div class="diet-section">
-              <strong class="section-header">Benefits</strong>
-              <p class="benefits-text">{{ conditions[selectedIndex].benefits }}</p>
+              <strong class="section-header">{{ $t('dietPlans.benefits') }}</strong>
+              <p class="benefits-text">
+                {{ $t(`dietPlans.conditions.${conditions[selectedIndex].translationKey}.benefits`) }}
+              </p>
             </div>
           </div>
         </div>
@@ -60,6 +66,7 @@ export default {
       conditions: [
         {
           name: 'DIABETES',
+          translationKey: 'diabetes',
           image: dietImg,
           eat: ['Whole grains', 'Leafy greens', 'Lentils'],
           avoid: ['Sugar', 'White bread', 'Processed foods'],
@@ -67,6 +74,7 @@ export default {
         },
         {
           name: 'PCOD',
+          translationKey: 'pcod',
           image: pcodImg,
           eat: ['Fiber-rich veggies', 'Lean protein', 'Omega-3 foods'],
           avoid: ['Refined carbs', 'Sugar', 'Fried foods'],
@@ -74,6 +82,7 @@ export default {
         },
         {
           name: 'PCOS',
+          translationKey: 'pcos',
           image: dietImg,
           eat: ['Low GI foods', 'Anti-inflammatory greens', 'Nuts'],
           avoid: ['Dairy', 'Sugar', 'White rice'],
@@ -81,6 +90,7 @@ export default {
         },
         {
           name: 'CONSTIPATION',
+          translationKey: 'constipation',
           image: landImg,
           eat: ['Papaya', 'Oats', 'Leafy vegetables', 'Water'],
           avoid: ['Dairy', 'Red meat', 'Processed snacks'],
@@ -88,6 +98,7 @@ export default {
         },
         {
           name: 'WEIGHT LOSS',
+          translationKey: 'weightLoss',
           image: dietImg,
           eat: ['Salads', 'Green tea', 'Lean meat', 'Millets'],
           avoid: ['Sweets', 'Soft drinks', 'Junk food'],
@@ -95,6 +106,7 @@ export default {
         },
         {
           name: 'BP',
+          translationKey: 'bloodPressure',
           image: backImg,
           eat: ['Bananas', 'Low-sodium foods', 'Beetroot', 'Oats'],
           avoid: ['Salt', 'Pickles', 'Canned foods'],
@@ -208,7 +220,7 @@ export default {
 
 .enlarged-card {
   position: fixed;
-  top: 40px;
+  top: 0px;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
@@ -216,7 +228,7 @@ export default {
   border-radius: 20px;
   width: 90%;
   max-width: 480px;
-  height:600px;
+  height:650px;
   padding: 30px;
   box-shadow: 0 12px 60px rgba(0, 100, 0, 0.35);
   z-index: 900;
@@ -248,9 +260,8 @@ export default {
   padding: 8px 14px;
   border-radius: 10px;
   cursor: pointer;
-  top:20px;
+  margin-top:2px;
   left:10px;
-  margin-bottom: 20px;
   font-weight: bold;
   color: #05472a;
   font-size: 16px;

@@ -357,106 +357,104 @@
     "description": "Improves digestion. Best taken on an empty stomach."
   }
 },
-
   "dietPlans": {
     "title": "AyurCure Diet Plans",
-    "cardImageAlt": "{name} condition image",
     "backButton": "Back",
-    "dietPlanSuffix": "Diet Plan",
+    "dietPlan": "Diet Plan",
     "whatToEat": "What to Eat",
     "whatToAvoid": "What to Avoid",
     "benefits": "Benefits",
     "conditions": {
       "diabetes": {
         "name": "DIABETES",
-        "eat": [
-          "Whole grains",
-          "Leafy greens",
-          "Lentils"
-        ],
-        "avoid": [
-          "Sugar",
-          "White bread",
-          "Processed foods"
-        ],
+        "eat": {
+          "0": "Whole grains",
+          "1": "Leafy greens",
+          "2": "Lentils"
+        },
+        "avoid": {
+          "0": "Sugar",
+          "1": "White bread",
+          "2": "Processed foods"
+        },
         "benefits": "Helps regulate blood sugar and prevents insulin spikes."
       },
       "pcod": {
         "name": "PCOD",
-        "eat": [
-          "Fiber-rich veggies",
-          "Lean protein",
-          "Omega-3 foods"
-        ],
-        "avoid": [
-          "Refined carbs",
-          "Sugar",
-          "Fried foods"
-        ],
+        "eat": {
+          "0": "Fiber-rich veggies",
+          "1": "Lean protein",
+          "2": "Omega-3 foods"
+        },
+        "avoid": {
+          "0": "Refined carbs",
+          "1": "Sugar",
+          "2": "Fried foods"
+        },
         "benefits": "Balances hormones and supports healthy weight."
       },
       "pcos": {
         "name": "PCOS",
-        "eat": [
-          "Low GI foods",
-          "Anti-inflammatory greens",
-          "Nuts"
-        ],
-        "avoid": [
-          "Dairy",
-          "Sugar",
-          "White rice"
-        ],
+        "eat": {
+          "0": "Low GI foods",
+          "1": "Anti-inflammatory greens",
+          "2": "Nuts"
+        },
+        "avoid": {
+          "0": "Dairy",
+          "1": "Sugar",
+          "2": "White rice"
+        },
         "benefits": "Regulates periods and reduces inflammation."
       },
       "constipation": {
         "name": "CONSTIPATION",
-        "eat": [
-          "Papaya",
-          "Oats",
-          "Leafy vegetables",
-          "Water"
-        ],
-        "avoid": [
-          "Dairy",
-          "Red meat",
-          "Processed snacks"
-        ],
+        "eat": {
+          "0": "Papaya",
+          "1": "Oats",
+          "2": "Leafy vegetables",
+          "3": "Water"
+        },
+        "avoid": {
+          "0": "Dairy",
+          "1": "Red meat",
+          "2": "Processed snacks"
+        },
         "benefits": "Improves digestion and regularizes bowel movements."
       },
       "weightLoss": {
         "name": "WEIGHT LOSS",
-        "eat": [
-          "Salads",
-          "Green tea",
-          "Lean meat",
-          "Millets"
-        ],
-        "avoid": [
-          "Sweets",
-          "Soft drinks",
-          "Junk food"
-        ],
+        "eat": {
+          "0": "Salads",
+          "1": "Green tea",
+          "2": "Lean meat",
+          "3": "Millets"
+        },
+        "avoid": {
+          "0": "Sweets",
+          "1": "Soft drinks",
+          "2": "Junk food"
+        },
         "benefits": "Burns fat and improves metabolism."
       },
-      "bp": {
+      "bloodPressure": {
         "name": "BP",
-        "eat": [
-          "Bananas",
-          "Low-sodium foods",
-          "Beetroot",
-          "Oats"
-        ],
-        "avoid": [
-          "Salt",
-          "Pickles",
-          "Canned foods"
-        ],
+        "eat": {
+          "0": "Bananas",
+          "1": "Low-sodium foods",
+          "2": "Beetroot",
+          "3": "Oats"
+        },
+        "avoid": {
+          "0": "Salt",
+          "1": "Pickles",
+          "2": "Canned foods"
+        },
         "benefits": "Controls blood pressure and supports heart health."
       }
     }
-  },
-  "appointment": {
+  },  
+"appointment": {
     "mainTitle": "Appointment Schedule",
     "selectDate": "Select Date",
     "morningSlotsTitle": "🌞 Morning (9:00 AM - 12:00 PM)",
