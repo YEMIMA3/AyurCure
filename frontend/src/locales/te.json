@@ -453,17 +453,78 @@
       }
     }
   },
-  "appointment": {
-    "mainTitle": "అపాయింట్‌మెంట్ షెడ్యూల్",
-    "selectDate": "తేదీని ఎంచుకోండి",
-    "morningSlotsTitle": "🌞 ఉదయం (9:00 AM - 12:00 PM)",
-    "eveningSlotsTitle": "🌙 సాయంత్రం (5:00 PM - 9:00 PM)",
-    "appointmentsForDate": "{date} కోసం అపాయింట్‌మెంట్‌లు",
-    "phoneLabel": "ఫోన్:",
-    "symptomsLabel": "లక్షణాలు:",
-    "timeLabel": "సమయం:",
-    "cancelButton": "రద్దు చేయి",
-    "cancelAlert": "డాక్టర్ ID {id}తో అపాయింట్‌మెంట్ రద్దు చేయబడింది."
+  "appointments": {
+    "mainTitle": "మీ నియామక షెడ్యూల్",
+    "emailLabel": "మీ ఇమెయిల్ నమోదు చేయండి",
+    "emailPlaceholder": "your.email@example.com",
+    "loadButton": "నియామకాలు లోడ్ చేయండి",
+    "selectDate": "తేదీ ఎంచుకోండి",
+    "morningSlots": "🌞 ఉదయం (9:00 AM - 12:00 PM)",
+    "eveningSlots": "🌙 సాయంత్రం (5:00 PM - 9:00 PM)",
+    "confirmedAppointments": "అన్ని ధృవీకరించబడిన నియామకాలు",
+    "downloadButton": "⬇️ PDF డౌన్లోడ్ చేయండి",
+    "noAppointments": "ధృవీకరించబడిన నియామకాలు ఏవీ లేవు.",
+    "defaultDoctor": "డాక్టర్",
+    "defaultDegree": "డిగ్రీ",
+    "defaultSpecialization": "స్పెషలిస్ట్",
+    "defaultLocation": "స్థానం",
+    "phoneLabel": "ఫోన్",
+    "concernLabel": "సమస్య",
+    "dateLabel": "తేదీ",
+    "timeLabel": "సమయం",
+    "statusLabel": "స్థితి",
+    "notAvailable": "అందుబాటులో లేదు",
+    "notSet": "సెట్ చేయబడలేదు",
+    "pendingStatus": "పెండింగ్‌లో ఉంది",
+    "cancelButton": "రద్దు చేయండి"
+  },
+  "appointmentform": {
+    "backButton": {
+      "text": "వెనక్కి",
+      "title": "మునుపటి పేజీకి తిరిగి వెళ్ళండి"
+    },
+    "title": "మీ అపాయింట్మెంట్ బుక్ చేయండి",
+    "form": {
+      "name": {
+        "label": "పేరు",
+        "placeholder": "మీ పూర్తి పేరును నమోదు చేయండి"
+      },
+      "age": {
+        "label": "వయస్సు",
+        "placeholder": "మీ వయస్సును నమోదు చేయండి"
+      },
+      "gender": {
+        "label": "లింగం",
+        "defaultOption": "లింగాన్ని ఎంచుకోండి",
+        "options": {
+          "male": "పురుషుడు",
+          "female": "స్త్రీ",
+          "other": "ఇతర"
+        }
+      },
+      "phone": {
+        "label": "ఫోన్ నంబర్",
+        "placeholder": "మీ ఫోన్ నంబర్ నమోదు చేయండి"
+      },
+      "email": {
+        "label": "ఇమెయిల్",
+        "placeholder": "మీ ఇమెయిల్ చిరునామా నమోదు చేయండి"
+      },
+      "date": {
+        "label": "అపాయింట్మెంట్ తేదీ"
+      },
+      "doctor": {
+        "label": "డాక్టర్"
+      },
+      "doctorEmail": {
+        "label": "డాక్టర్ ఇమెయిల్"
+      },
+      "concern": {
+        "label": "మీ సమస్యను వివరించండి",
+        "placeholder": "మీ వైద్య సమస్యను క్లుప్తంగా వివరించండి"
+      }
+    },
+    "submitButton": "📅 అపాయింట్మెంట్ బుక్ చేయండి"
   },
   "footer": {
     "brandTitle": "ఆయుర్క్యూర్",

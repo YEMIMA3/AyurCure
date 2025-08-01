@@ -454,17 +454,78 @@
       }
     }
   },  
-"appointment": {
-    "mainTitle": "Appointment Schedule",
+  "appointments": {
+    "mainTitle": "Your Appointment Schedule",
+    "emailLabel": "Enter your email",
+    "emailPlaceholder": "your.email@example.com",
+    "loadButton": "Load Appointments",
     "selectDate": "Select Date",
-    "morningSlotsTitle": "🌞 Morning (9:00 AM - 12:00 PM)",
-    "eveningSlotsTitle": "🌙 Evening (5:00 PM - 9:00 PM)",
-    "appointmentsForDate": "Appointments for {date}",
-    "phoneLabel": "Phone:",
-    "symptomsLabel": "Symptoms:",
-    "timeLabel": "Time:",
-    "cancelButton": "Cancel",
-    "cancelAlert": "Appointment with Doctor ID {id} has been canceled."
+    "morningSlots": "🌞 Morning (9:00 AM - 12:00 PM)",
+    "eveningSlots": "🌙 Evening (5:00 PM - 9:00 PM)",
+    "confirmedAppointments": "All Confirmed Appointments on",
+    "downloadButton": "⬇️ Download PDF",
+    "noAppointments": "No confirmed appointments found.",
+    "defaultDoctor": "Doctor",
+    "defaultDegree": "Degree",
+    "defaultSpecialization": "Specialist",
+    "defaultLocation": "Location",
+    "phoneLabel": "Phone",
+    "concernLabel": "Concern",
+    "dateLabel": "Date",
+    "timeLabel": "Time of Day",
+    "statusLabel": "Status",
+    "notAvailable": "N/A",
+    "notSet": "Not Set",
+    "pendingStatus": "Pending",
+    "cancelButton": "Cancel"
+  },
+  "appointmentform": {
+    "backButton": {
+      "text": "Back",
+      "title": "Go back to previous page"
+    },
+    "title": "Book Your Appointment",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter your full name"
+      },
+      "age": {
+        "label": "Age",
+        "placeholder": "Enter your age"
+      },
+      "gender": {
+        "label": "Gender",
+        "defaultOption": "Select Gender",
+        "options": {
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        }
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Enter your phone number"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email address"
+      },
+      "date": {
+        "label": "Appointment Date"
+      },
+      "doctor": {
+        "label": "Doctor"
+      },
+      "doctorEmail": {
+        "label": "Doctor Email"
+      },
+      "concern": {
+        "label": "Describe Your Concern",
+        "placeholder": "Briefly describe your medical concern"
+      }
+    },
+    "submitButton": "📅 Book Appointment"
   },
   "footer": {
     "brandTitle": "AyurCure",

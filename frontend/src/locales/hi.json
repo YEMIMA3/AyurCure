@@ -454,17 +454,78 @@
       }
     }
   },
-  "appointment": {
-    "mainTitle": "अपॉइंटमेंट शेड्यूल",
-    "selectDate": "दिनांक चुनें",
-    "morningSlotsTitle": "🌞 सुबह (9:00 AM - 12:00 PM)",
-    "eveningSlotsTitle": "🌙 शाम (5:00 PM - 9:00 PM)",
-    "appointmentsForDate": "{date} के लिए अपॉइंटमेंट",
-    "phoneLabel": "फ़ोन:",
-    "symptomsLabel": "लक्षण:",
-    "timeLabel": "समय:",
-    "cancelButton": "रद्द करें",
-    "cancelAlert": "डॉक्टर आईडी {id} के साथ अपॉइंटमेंट रद्द कर दिया गया है।"
+  "appointments": {
+    "mainTitle": "आपका अपॉइंटमेंट शेड्यूल",
+    "emailLabel": "अपना ईमेल दर्ज करें",
+    "emailPlaceholder": "your.email@example.com",
+    "loadButton": "अपॉइंटमेंट लोड करें",
+    "selectDate": "तारीख चुनें",
+    "morningSlots": "🌞 सुबह (9:00 AM - 12:00 PM)",
+    "eveningSlots": "🌙 शाम (5:00 PM - 9:00 PM)",
+    "confirmedAppointments": "सभी पुष्टि किए गए अपॉइंटमेंट",
+    "downloadButton": "⬇️ PDF डाउनलोड करें",
+    "noAppointments": "कोई पुष्टि किया गया अपॉइंटमेंट नहीं मिला।",
+    "defaultDoctor": "डॉक्टर",
+    "defaultDegree": "डिग्री",
+    "defaultSpecialization": "विशेषज्ञ",
+    "defaultLocation": "स्थान",
+    "phoneLabel": "फोन",
+    "concernLabel": "समस्या",
+    "dateLabel": "तारीख",
+    "timeLabel": "समय",
+    "statusLabel": "स्थिति",
+    "notAvailable": "उपलब्ध नहीं",
+    "notSet": "सेट नहीं किया गया",
+    "pendingStatus": "लंबित",
+    "cancelButton": "रद्द करें"
+  },
+  "appointmentform": {
+    "backButton": {
+      "text": "पीछे जाएं",
+      "title": "पिछले पृष्ठ पर वापस जाएं"
+    },
+    "title": "अपॉइंटमेंट बुक करें",
+    "form": {
+      "name": {
+        "label": "नाम",
+        "placeholder": "अपना पूरा नाम दर्ज करें"
+      },
+      "age": {
+        "label": "उम्र",
+        "placeholder": "अपनी उम्र दर्ज करें"
+      },
+      "gender": {
+        "label": "लिंग",
+        "defaultOption": "लिंग चुनें",
+        "options": {
+          "male": "पुरुष",
+          "female": "महिला",
+          "other": "अन्य"
+        }
+      },
+      "phone": {
+        "label": "फोन नंबर",
+        "placeholder": "अपना फोन नंबर दर्ज करें"
+      },
+      "email": {
+        "label": "ईमेल",
+        "placeholder": "अपना ईमेल पता दर्ज करें"
+      },
+      "date": {
+        "label": "अपॉइंटमेंट की तारीख"
+      },
+      "doctor": {
+        "label": "डॉक्टर"
+      },
+      "doctorEmail": {
+        "label": "डॉक्टर का ईमेल"
+      },
+      "concern": {
+        "label": "अपनी समस्या बताएं",
+        "placeholder": "अपनी चिकित्सकीय समस्या संक्षेप में बताएं"
+      }
+    },
+    "submitButton": "📅 अपॉइंटमेंट बुक करें"
   },
   "footer": {
     "brandTitle": "आयुरक्योर",

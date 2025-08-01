@@ -1,62 +1,102 @@
 <template>
   <div class="appointment-wrapper">
-    <button class="back-btn" @click="goBack">← Back</button>
-    <h2 class="appointment-title">Book Your Appointment</h2>
+    <button class="back-btn" @click="goBack" :title="$t('appointmentform.backButton.title')">
+       {{ $t('appointmentform.backButton.text') }}
+    </button>
+    <h2 class="appointment-title">{{ $t('appointmentform.title') }}</h2>
 
     <form @submit.prevent="submitForm" class="appointment-form">
       <div class="form-grid">
         <div class="form-group">
-          <label for="name">Name</label>
-          <input v-model="form.name" type="text" id="name" :readonly="isNamePrefilled" required />
+          <label for="name">{{ $t('appointmentform.form.name.label') }}</label>
+          <input 
+            v-model="form.name" 
+            type="text" 
+            id="name" 
+            :readonly="isNamePrefilled" 
+            :placeholder="$t('appointmentform.form.name.placeholder')" 
+            required 
+          />
         </div>
 
         <div class="form-group">
-          <label for="age">Age</label>
-          <input v-model="form.age" type="number" id="age" min="1" max="120" required />
+          <label for="age">{{ $t('appointmentform.form.age.label') }}</label>
+          <input 
+            v-model="form.age" 
+            type="number" 
+            id="age" 
+            min="1" 
+            max="120" 
+            :placeholder="$t('appointmentform.form.age.placeholder')" 
+            required 
+          />
         </div>
 
         <div class="form-group">
-          <label for="gender">Gender</label>
+          <label for="gender">{{ $t('appointmentform.form.gender.label') }}</label>
           <select v-model="form.gender" id="gender" required>
-            <option disabled value="">Select Gender</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
+            <option disabled value="">
+              {{ $t('appointmentform.form.gender.defaultOption') }}
+            </option>
+            <option>{{ $t('appointmentform.form.gender.options.male') }}</option>
+            <option>{{ $t('appointmentform.form.gender.options.female') }}</option>
+            <option>{{ $t('appointmentform.form.gender.options.other') }}</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input v-model="form.phone" type="tel" id="phone" required />
+          <label for="phone">{{ $t('appointmentform.form.phone.label') }}</label>
+          <input 
+            v-model="form.phone" 
+            type="tel" 
+            id="phone" 
+            :placeholder="$t('appointmentform.form.phone.placeholder')" 
+            required 
+          />
         </div>
 
         <div class="form-group">
-          <label for="email">Email</label>
-          <input v-model="form.email" type="email" id="email" :readonly="isEmailPrefilled" required />
+          <label for="email">{{ $t('appointmentform.form.email.label') }}</label>
+          <input 
+            v-model="form.email" 
+            type="email" 
+            id="email" 
+            :readonly="isEmailPrefilled" 
+            :placeholder="$t('appointmentform.form.email.placeholder')" 
+            required 
+          />
         </div>
 
         <div class="form-group">
-          <label for="date">Appointment Date</label>
+          <label for="date">{{ $t('appointmentform.form.date.label') }}</label>
           <input v-model="form.date" type="date" id="date" required />
         </div>
 
         <div class="form-group">
-          <label for="doctor">Doctor</label>
+          <label for="doctor">{{ $t('appointmentform.form.doctor.label') }}</label>
           <input v-model="form.doctor" type="text" id="doctor" readonly />
         </div>
 
         <div class="form-group">
-          <label for="doctorEmail">Doctor Email</label>
+          <label for="doctorEmail">{{ $t('appointmentform.form.doctorEmail.label') }}</label>
           <input v-model="form.doctorEmail" type="email" id="doctorEmail" readonly />
         </div>
 
         <div class="form-group full-width">
-          <label for="concern">Describe Your Concern</label>
-          <textarea v-model="form.concern" id="concern" rows="3" required></textarea>
+          <label for="concern">{{ $t('appointmentform.form.concern.label') }}</label>
+          <textarea 
+            v-model="form.concern" 
+            id="concern" 
+            rows="3" 
+            :placeholder="$t('appointmentform.form.concern.placeholder')" 
+            required
+          ></textarea>
         </div>
       </div>
 
-      <button type="submit" class="submit-btn">📅 Book Appointment</button>
+      <button type="submit" class="submit-btn">
+        {{ $t('appointmentform.submitButton') }}
+      </button>
     </form>
   </div>
 </template>

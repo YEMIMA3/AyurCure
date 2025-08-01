@@ -1,23 +1,23 @@
 <template>
   <div class="appointment-container">
-    <h1 class="main-title">Your Appointment Schedule</h1>
+    <h1 class="main-title">{{ $t('appointments.mainTitle') }}</h1>
 
     <!-- Email fallback input -->
     <div v-if="!email" class="email-input-box">
-      <label for="email">Enter your email:</label>
-      <input id="email" v-model="emailInput" type="email" />
-      <button @click="setEmail">Load Appointments</button>
+      <label for="email">{{ $t('appointments.emailLabel') }}:</label>
+      <input id="email" v-model="emailInput" type="email" :placeholder="$t('appointments.emailPlaceholder')" />
+      <button @click="setEmail">{{ $t('appointments.loadButton') }}</button>
     </div>
 
     <!-- Left Panel -->
     <div v-else class="calendar-slot-panel">
       <div class="calendar-box">
-        <h3>Select Date</h3>
+        <h3>{{ $t('appointments.selectDate') }}</h3>
         <input type="date" v-model="selectedDate" />
       </div>
 
       <div class="slot-group">
-        <h4>🌞 Morning (9:00 AM - 12:00 PM)</h4>
+        <h4>{{ $t('appointments.morningSlots') }}</h4>
         <div class="slot-grid">
           <button
             v-for="slot in morningSlots"
@@ -31,7 +31,7 @@
       </div>
 
       <div class="slot-group">
-        <h4>🌙 Evening (5:00 PM - 9:00 PM)</h4>
+        <h4>{{ $t('appointments.eveningSlots') }}</h4>
         <div class="slot-grid">
           <button
             v-for="slot in eveningSlots"
@@ -48,16 +48,16 @@
     <!-- Appointments Panel -->
     <div class="appointments-panel" v-if="email">
       <h2>
-        All Confirmed Appointments on
+        {{ $t('appointments.confirmedAppointments') }}
         <span style="color: #2a6cd4">{{ new Date(selectedDate).toDateString() }}</span>
       </h2>
 
       <button v-if="filteredAppointments.length" @click="downloadPDF" class="download-btn">
-        ⬇️ Download PDF
+        {{ $t('appointments.downloadButton') }}
       </button>
 
       <div v-if="filteredAppointments.length === 0">
-        No confirmed appointments found.
+        {{ $t('appointments.noAppointments') }}
       </div>
 
       <div id="pdf-content" v-else>
@@ -68,18 +68,18 @@
         >
           <img :src="defaultDoctorImage" class="doctor-img-square" />
           <div class="doctor-info">
-            <h3>{{ appointment.doctorId?.name || 'Doctor' }}</h3>
-            <p><strong>{{ appointment.doctorId?.degree || 'Degree' }}</strong></p>
+            <h3>{{ appointment.doctorId?.name || $t('appointments.defaultDoctor') }}</h3>
+            <p><strong>{{ appointment.doctorId?.degree || $t('appointments.defaultDegree') }}</strong></p>
             <p>
-              {{ appointment.doctorId?.specialization || 'Specialist' }} -
-              {{ appointment.doctorId?.location || 'Location' }}
+              {{ appointment.doctorId?.specialization || $t('appointments.defaultSpecialization') }} -
+              {{ appointment.doctorId?.location || $t('appointments.defaultLocation') }}
             </p>
-            <p><strong>Phone:</strong> {{ appointment.doctorId?.phone || 'N/A' }}</p>
-            <p><strong>Concern:</strong> {{ appointment.concern || 'N/A' }}</p>
-            <p><strong>Date:</strong> {{ new Date(appointment.date).toDateString() || 'N/A' }}</p>
-            <p><strong>Time of Day:</strong> {{ appointment.timeOfDay || 'Not Set' }}</p>
-            <p><strong>Status:</strong> {{ appointment.status || 'Pending' }}</p>
-            <button @click="cancelAppointment(appointment._id)">Cancel</button>
+            <p><strong>{{ $t('appointments.phoneLabel') }}:</strong> {{ appointment.doctorId?.phone || $t('appointments.notAvailable') }}</p>
+            <p><strong>{{ $t('appointments.concernLabel') }}:</strong> {{ appointment.concern || $t('appointments.notAvailable') }}</p>
+            <p><strong>{{ $t('appointments.dateLabel') }}:</strong> {{ new Date(appointment.date).toDateString() || $t('appointments.notAvailable') }}</p>
+            <p><strong>{{ $t('appointments.timeLabel') }}:</strong> {{ appointment.timeOfDay || $t('appointments.notSet') }}</p>
+            <p><strong>{{ $t('appointments.statusLabel') }}:</strong> {{ appointment.status || $t('appointments.pendingStatus') }}</p>
+            <button @click="cancelAppointment(appointment._id)">{{ $t('appointments.cancelButton') }}</button>
           </div>
         </div>
       </div>
