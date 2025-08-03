@@ -219,7 +219,7 @@
   "usage": "Usage",
   "benefit": "Benefit"
 },
-  "aiSuggest": {
+ "aiSuggest": {
     "headerLabel": "Get Expert AI Suggestions",
     "inputPlaceholder": "Type your health concern (e.g., headache, cough)...",
     "buttonText": "Ask AI",

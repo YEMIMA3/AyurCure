@@ -82,6 +82,7 @@ const handleSubmit = async () => {
   overflow: hidden;
   filter: brightness(1.1);
   padding: 20px;
+  margin-top: 60px;
 }
 
 .contact-page-container::before {
@@ -104,8 +105,8 @@ const handleSubmit = async () => {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 90%;
-  max-width: 1000px;
-  min-height: 550px;
+  max-width: 800px;
+  min-height: 450px;
   z-index: 1;
   overflow: hidden;
 }
@@ -220,12 +221,8 @@ const handleSubmit = async () => {
     padding: 20px;
   }
 
-  .info-panel {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  
+
 }
 
 </style>

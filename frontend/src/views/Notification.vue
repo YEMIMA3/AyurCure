@@ -50,11 +50,11 @@ const enhanceNotification = (notif) => {
   if (notif.message.includes('remedy')) {
     title = 'Remedy Saved'
     emoji = '🧴'
-    image = 'https://cdn-icons-png.flaticon.com/512/2965/2965567.png'
+    image = 'https://cdn-icons-png.flaticon.com/512/2909/2909768.png'
   } else if (notif.message.includes('appointment')) {
     title = 'Appointment Booked'
     emoji = '📅'
-    image = 'https://cdn-icons-png.flaticon.com/512/1087/1087929.png'
+    image = 'https://cdn-icons-png.flaticon.com/512/747/747310.png'
   } else if (notif.message.includes('cancel')) {
     title = 'Cancelled'
     emoji = '❌'

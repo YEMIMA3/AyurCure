@@ -1,7 +1,7 @@
 import axios from 'axios'
 
+// Make sure this environment variable is set in your .env file as: VITE_OPENAI_API_KEY=your_key_here
 const API_KEY = import.meta.env.VITE_OPENAI_API_KEY
-console.log("🔍 API KEY loaded:", API_KEY)
 
 export async function getRemedySuggestion(symptom) {
   if (!API_KEY) {
@@ -17,13 +17,13 @@ export async function getRemedySuggestion(symptom) {
           {
             role: 'user',
             content: `Suggest an Ayurvedic remedy for: ${symptom}.
-Include plant, part used, preparation, dosage, and caution.`
+            Include plant, part used, preparation, dosage, and caution.`
           }
         ]
       },
       {
         headers: {
-          Authorization: `Bearer ${API_KEY}`,
+          Authorization: `Bearer ${API_KEY}`, // ✅ fixed with backticks
           'Content-Type': 'application/json'
         }
       }
@@ -31,7 +31,7 @@ Include plant, part used, preparation, dosage, and caution.`
 
     return response.data.choices[0].message.content
   } catch (error) {
-    console.error("❌ OpenAI API Error:", error.response || error.message)
+    console.error("❌ OpenAI API Error:", error.response?.data || error.message)
     throw new Error("Failed to fetch remedy suggestion. Check browser console.")
   }
 }
