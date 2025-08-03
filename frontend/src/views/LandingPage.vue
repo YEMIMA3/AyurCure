@@ -32,7 +32,7 @@
   v-for="(card, index) in visibleCards"
   :key="index"
 >
-  <div class="card-image" :style="{ backgroundImage: `url(${card.image})` }"></div>
+  <div class="card-image" :style="{ backgroundImage: `url(${card.image}) `}"></div>
   <div class="card-content">
     <h3>{{ $t(`landing.features.cards.${card.key}.title`) }}</h3>
     <p>{{ $t(`landing.features.cards.${card.key}.text`) }}</p>
@@ -124,28 +124,28 @@ const cards = ref([
     image: new URL("../assets/feature2.png", import.meta.url).href,
   },
   {
-    key: "consult",
+    key: "appoinment",
     image: new URL("../assets/feature3.png", import.meta.url).href,
   },
   {
     key: "bookmark",
-    image: new URL("../assets/feature3.png", import.meta.url).href,
+    image: new URL("../assets/feature4.jpg", import.meta.url).href,
   },
   {
     key: "multilang",
-    image: new URL("../assets/feature2.png", import.meta.url).href,
+    image: new URL("../assets/feature5.jpg", import.meta.url).href,
   },
   {
     key: "emergency",
-    image: new URL("../assets/feature4.png", import.meta.url).href,
+    image: new URL("../assets/feature6.jpg", import.meta.url).href,
   },
   {
-    key: "appoinment",
-    image: new URL("../assets/feature4.png", import.meta.url).href,
+    key: "DietPlan",
+    image: new URL("../assets/diet.jpg", import.meta.url).href,
   },
   {
     key: "contactUs",
-    image: new URL("../assets/feature4.png", import.meta.url).href,
+    image: new URL("../assets/feature8.jpg", import.meta.url).href,
   },
 ])
 
